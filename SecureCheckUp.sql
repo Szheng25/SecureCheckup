@@ -127,3 +127,68 @@ UPDATE S_Appointments SET billing_id = 403 WHERE appt_id = 303;
 -- Step 6: Add foreign key constraint to S_Billing on appt_id
 ALTER TABLE S_Billing
 ADD CONSTRAINT fk_appt_id FOREIGN KEY (appt_id) REFERENCES S_Appointments(appt_id);
+
+-- Create view for Patient and Appointment Details
+CREATE OR REPLACE VIEW Patient_Appointment_Details AS
+SELECT 
+    P.patient_id, 
+    P.first_name AS patient_first_name, 
+    P.last_name AS patient_last_name, 
+    P.diagnosis, 
+    A.appt_id, 
+    A.admission_date, 
+    A.discharge_date, 
+    A.appt_reason, 
+    A.doctor_assigned
+FROM 
+    S_Patient P
+JOIN 
+    S_Appointments A ON P.patient_id = A.patient_id;
+
+-- Create view for Billing and Patient Details
+CREATE OR REPLACE VIEW Billing_Patient_Details AS
+SELECT 
+    B.billing_id, 
+    P.first_name AS patient_first_name, 
+    P.last_name AS patient_last_name, 
+    B.total_amount, 
+    B.insurance_coverage, 
+    B.payment_status, 
+    B.date_issued
+FROM 
+    S_Billing B
+JOIN 
+    S_Appointments A ON B.appt_id = A.appt_id
+JOIN 
+    S_Patient P ON A.patient_id = P.patient_id;
+
+-- Create view for Medical Staff and Assignments
+CREATE OR REPLACE VIEW Medical_Staff_Assignments AS
+SELECT 
+    M.medical_staff_id, 
+    M.first_name AS staff_first_name, 
+    M.last_name AS staff_last_name, 
+    M.role, 
+    A.appt_id, 
+    A.admission_date, 
+    A.discharge_date, 
+    A.appt_reason
+FROM 
+    S_Medical_Staff M
+JOIN 
+    Appointment_Assignments AA ON M.medical_staff_id = AA.medical_staff_id
+JOIN 
+    S_Appointments A ON AA.appt_id = A.appt_id;
+
+-- Grant SELECT privileges on tables to public or specific user (e.g., 'my_user')
+GRANT SELECT ON S_Department TO PUBLIC;
+GRANT SELECT ON S_Medical_Staff TO PUBLIC;
+GRANT SELECT ON S_Patient TO PUBLIC;
+GRANT SELECT ON S_Appointments TO PUBLIC;
+GRANT SELECT ON S_Billing TO PUBLIC;
+GRANT SELECT ON Appointment_Assignments TO PUBLIC;
+
+-- Grant SELECT privileges on views to public or specific user (e.g., 'my_user')
+GRANT SELECT ON Patient_Appointment_Details TO PUBLIC;
+GRANT SELECT ON Billing_Patient_Details TO PUBLIC;
+GRANT SELECT ON Medical_Staff_Assignments TO PUBLIC;
