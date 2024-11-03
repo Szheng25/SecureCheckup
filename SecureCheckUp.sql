@@ -192,3 +192,5 @@ GRANT SELECT ON Appointment_Assignments TO PUBLIC;
 GRANT SELECT ON Patient_Appointment_Details TO PUBLIC;
 GRANT SELECT ON Billing_Patient_Details TO PUBLIC;
 GRANT SELECT ON Medical_Staff_Assignments TO PUBLIC;
+
+
