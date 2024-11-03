@@ -13,7 +13,8 @@
         <nav id="nav">
             <a href="#whatAreWe">What are we?</a>
             <a href="#ourTool">Our Tool</a>
-            <a href="#securingIt">Securing It</a>
+            <a href="#howWeBuiltIt">How We Built It</a>
+            <a href="#data">Data</a>
             <a href="#tryItOut">Try It Out</a>
         </nav>
         
@@ -22,34 +23,48 @@
             <i class="fa fa-bars"></i>
         </a>
 
-        <section id="header">
-            <h1>SecureCheckup</h1>
-            <p>Are YOU represented? Well you should be.</p>
-        </section>
+        <section class="main-page"> 
+            <section id="header">
+                <img src="assets/images/logo.png">
+                <p>Are YOU represented? Well you should be.</p>
+            </section>
 
-        <section id="whatAreWe">
-            <h2>What Are We?</h2>
-            <p>Welcome to SecureCheckup! Our team is dedicated to making sure everyone is represented in healthcare data.</p>
-        </section>
-        
-        <section id="ourTool">
-            <h2>Our Tool</h2>
-            <p>PLC MySQL and Oracle Database stuff...</p>
-        </section>
+            <section id="whatAreWe">
+                <h2>What Are We?</h2>
+                <p>Welcome to SecureCheckup! Historical experiences of discrimination and lack of representation can lead to mistrust and decreased engagement with healthcare systems. Our team tackles that by being dedicated to making sure disproportionately underrepresenting minority groups are represented in healthcare data.</p>
+            </section>
+            
+            <section id="ourTool">
+                <h2>Our Tool</h2>
+                <p>SecureCheckup provides a secure checkup on data that formats it in a way to specifically compare underrepresented groups so the user is able to visually see if the data is skewed. Underrepresented communities experience poorer health outcomes, including higher rates of chronic diseases, maternal mortality, and infant mortality. Patients from underrepresented communities may face difficulties in finding healthcare providers who share their cultural background, language, or socioeconomic status.</p>
+            </section>
 
-        <section id="securingIt">
-            <h2>Securing It</h2>
-            <p>Validation & Sanitization</p>
-        </section>
+            <section id="howWeBuiltIt">
+                <h2>How We Built It</h2>
+                <p>The frontend uses HTML/CSS and JavaScript while the backend uses a database in PLSQL on Oracle and visualizes that using Tableau. The front and backend are combined using REST API in JSON using Python. Being able to implement security features such as validating and sanitizing the user's input on the website would help make sure all the patient and medical information is protected on the database.</p>
+            </section>
 
-        <section id="tryItOut">
-            <h2>Try It Out!</h2>
-            <form>
-                <label for="input">Enter a query:</label><br>
-                <input type="text" id="input" name="input"><br><br>
+            <section id="Data">
+                <h2>Data Analyzed</h2>
+                <img src="assets/images/diagnosis.png" alt="Diagnosis data in a graph.">
+                <p>The experience levels and salaries of medical staff across different specialties (Neurology, Oncology, Cardiology) categorized by race and ethnicity, highlighting variations in experience and compensation among African American, Asian, Caucasian, and Hispanic groups.</p>
 
-                <input type="submit" value="Submit">
-            </form>
+                <img src="assets/images/ethnicity.png" alt="Ethnicity data in a graph.">
+                <p>Demographic analysis of gender distribution and diagnosis trends.</p>
+
+                <img src="assets/images/payment.png" alt="Payment data in a graph.">
+                <p>Tracking payment amounts due and amounts paid to monitor billing status.</p>
+            </section>
+
+            <section id="tryItOut">
+                <h2>Try It Out!</h2>
+                <form>
+                    <label for="input">Enter a query:</label><br>
+                    <input type="text" id="input" name="input"><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
         </section>
     </body>
 </html>

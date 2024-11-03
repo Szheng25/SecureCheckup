@@ -1,8 +1,10 @@
 
 # SecureCheckup
 Project Title: Secure Checkup  
-@authors: Tahiba Rahman, Aparnaa Senthilnathan, Stacey Zheng  
+Authors: Tahiba Rahman, Aparnaa Senthilnathan, Stacey Zheng  
 A Hack.COMS 2024 Hackathon Project  
+
+Are YOU represented in health data? Well you should be...
 
 ## Inspiration
 We wanted to tackle the challenge of healthcare data disproportionately underrepresenting minority groups.
@@ -25,7 +27,11 @@ Our website uses healthcare data and formats it in a way that specifically compa
 - Getting the data analysis automated using an API so that the process can be streamlined.
 
 ## What we learned
-Our team faced had not worked with Tableau before and while we couldn't get data directly from Oracle, we were able to find a workaround with converting the data into a spreadsheet. Getting a project idea fleshed out and implemented within the time period given for this hackathon was also a challenge. 
+- Our team faced had not worked with Tableau before and while we couldn't get data directly from Oracle, we were able to find a workaround with converting the data into a spreadsheet. 
+- Getting a project idea fleshed out and implemented within the time period given for this hackathon was also a challenge. 
 
 ## What's next for SecureCheckup
 Being able to implement security features such as validating and sanitizing the user's input on the website would help make sure all the patient and medical information is protected on the database. 
+
+### Devpost
+https://devpost.com/software/securecheckup?ref_content=my-projects-tab&ref_feature=my_projects 
