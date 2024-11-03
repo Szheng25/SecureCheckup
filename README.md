@@ -10,8 +10,10 @@ We wanted to include our interests of working with a database and incorporating 
 ## What it does
 
 ## How we built it
-- HTML/CSS, JavaScript  
-- PLCSQL on Oracle  
+- HTML/CSS
+- JavaScript  
+- PLSQL on Oracle.
+- JSON 
 
 ## Challenges we ran into
 
