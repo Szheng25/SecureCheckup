@@ -4,16 +4,52 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SecureCheckup</title>
+        <!-- Icon library loaded to show hamburger menu -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <script src="js/script.js"></script>
     </head>
     <body>
-        <h1>SecureCheckup</h1>
-        <form>
-            <label for="input">Enter a query:</label><br>
-            <input type="text" id="input" name="input"><br><br>
-            
-            <input type="submit" value="Submit">
-        </form>
+        <nav id="nav">
+            <a href="#whatAreWe">What are we?</a>
+            <a href="#ourTool">Our Tool</a>
+            <a href="#securingIt">Securing It</a>
+            <a href="#tryItOut">Try It Out</a>
+        </nav>
+        
+        <!-- "Hamburger menu" / "Bar icon" to toggle nav links -->
+        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <section id="header">
+            <h1>SecureCheckup</h1>
+            <p>Are YOU represented? Well you should be.</p>
+        </section>
+
+        <section id="whatAreWe">
+            <h2>What Are We?</h2>
+            <p>Welcome to SecureCheckup! Our team is dedicated to making sure everyone is represented in healthcare data.</p>
+        </section>
+        
+        <section id="ourTool">
+            <h2>Our Tool</h2>
+            <p>PLC MySQL and Oracle Database stuff...</p>
+        </section>
+
+        <section id="securingIt">
+            <h2>Securing It</h2>
+            <p>Validation & Sanitization</p>
+        </section>
+
+        <section id="tryItOut">
+            <h2>Try It Out!</h2>
+            <form>
+                <label for="input">Enter a query:</label><br>
+                <input type="text" id="input" name="input"><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
     </body>
 </html>

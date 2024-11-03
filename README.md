@@ -11,7 +11,7 @@ We wanted to include our interests of working with a database and incorporating 
 
 ## How we built it
 - HTML/CSS, JavaScript  
-- PLCSQL on Oracle  
+- PLC MySQL and Oracle Database
 
 ## Challenges we ran into
 
