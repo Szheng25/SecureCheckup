@@ -16,6 +16,7 @@ nav a, .icon {
     text-align: center;
     float: none;
     display: block;
+    border: 1px solid white;
 }
 
 /* Add background color on mouse-over */
@@ -27,10 +28,10 @@ nav a:hover, .icon:hover {
 /* Style hamburger menu */
 .icon {
     background: black;
-    padding: 13px;
+    padding: 14px;
     position: absolute;
     right: 8px;
-    top: 9px;
+    top: 8px;
 }
 
 @media screen and (min-width: 600px) {
