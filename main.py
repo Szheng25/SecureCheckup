@@ -6,6 +6,7 @@ from flask import Flask, jsonify, request
 import mysql.connector
 from commands import *
 
+# main function
 def main():
     username, password = load_acc()
     db = mysql.connector.connect(
@@ -22,7 +23,6 @@ def main():
     else:
         create_db(db)
         use_db(db)
-    print(db)
     
     # create_department_table(db)
     # create_medical_staff_table(db)

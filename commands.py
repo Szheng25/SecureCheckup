@@ -296,7 +296,7 @@ def grant_table_privileges(db):
         GRANT SELECT ON S_Billing TO PUBLIC;
         GRANT SELECT ON Appointment_Assignments TO PUBLIC;
     """
-    curs.execute(query)
+    curs.execute(query, multi=True)
 
 
 # Grant SELECT privileges on views to public or specific user (e.g., 'my_user')
@@ -307,6 +307,6 @@ def grant_view_privilege(db):
         GRANT SELECT ON Billing_Patient_Details TO PUBLIC;
         GRANT SELECT ON Medical_Staff_Assignments TO PUBLIC;
     """
-    curs.execute(query)
+    curs.execute(query, multi=True)
 
 
